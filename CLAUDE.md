@@ -69,3 +69,4 @@
 - 阶段 1：已完成（2026-10-20）。`src/abtest.py`、`src/features.py`、`notebooks/01_ab_test.ipynb`、`results/stage1_*`。随机化检验通过；ATE = 3.32 个百分点；CUPED 方差缩减 12.7%。截止时间定为 2019-03-19 0 点。
 - 阶段 2：已完成（2026-10-20）。`src/features.py`、`notebooks/02_features.ipynb`、`results/stage2_*`。43 个特征，泄露检查通过；划分保存在 `data/processed/split.csv`（训练 120,023 / 验证 40,008 / 测试 40,008）。
 - 阶段 3：已完成（2026-10-20）。`src/meta_learners.py`、`notebooks/03_uplift_models.ipynb`、`results/stage3_*`。最终模型：T-learner（逻辑回归），测试集 Qini 系数 0.0129、前 30% 增益 6.57 个百分点；响应模型 Qini 为负。
+- 阶段 4：已完成（2026-10-20）。`notebooks/04_evaluation.ipynb`、`results/stage4_*`。Qini 0.0129，95% 区间 [0.0068, 0.0195]，置换检验 p < 0.002；前 30% 拿到全部增量的 59.3%；与第二名无显著差异；没有勿扰型客户的证据。
