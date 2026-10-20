@@ -36,3 +36,26 @@ def setup_matplotlib():
         "savefig.dpi": 150,
         "savefig.bbox": "tight",
     })
+
+
+def smd_plot(smd, threshold=0.1, title=None):
+    """平衡性图：每行一个特征，横轴是 SMD（标准化均值差），虚线是 ±threshold。
+
+    smd：pandas Series，索引为特征名。
+    """
+    import numpy as np
+
+    fig, ax = plt.subplots(figsize=(7.5, 0.32 * len(smd) + 1.4))
+    y = np.arange(len(smd))[::-1]
+    ax.scatter(smd.to_numpy(), y, s=42, color=SERIES[0], edgecolor=SURFACE, linewidth=1, zorder=3)
+    for x in (-threshold, threshold):
+        ax.axvline(x, color=MUTED, linestyle="--", linewidth=1, zorder=1)
+    ax.axvline(0, color=INK_SECONDARY, linewidth=1, zorder=2)
+    lim = max(threshold * 1.6, float(np.nanmax(np.abs(smd.to_numpy()))) * 1.2)
+    ax.set_xlim(-lim, lim)
+    ax.set_yticks(y, [str(s).replace("$", r"\$") for s in smd.index])
+    ax.grid(axis="y", visible=False)
+    ax.set_xlabel(f"标准化均值差 SMD（实验组 − 对照组）；虚线为 ±{threshold}")
+    if title:
+        ax.set_title(title, loc="left", color=INK)
+    return fig, ax

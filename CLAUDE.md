@@ -65,4 +65,5 @@
 - Git：每完成一小步就提交一次，提交信息用中文简述做了什么。仓库为私有：GitHub `Eriksas/retail-uplift-ab`。
 
 ## 当前进度
-- 阶段 0：进行中。项目结构、规则和环境已建立；等待用户同意下载数据。
+- 阶段 0：已完成（2026-10-20）。数据已下载并校验，交易流水转存为 `data/processed/purchases.parquet`；增益评估指标已写好并与 scikit-uplift 对齐。
+- 阶段 1：已完成（2026-10-20）。`src/abtest.py`、`src/features.py`、`notebooks/01_ab_test.ipynb`、`results/stage1_*`。随机化检验通过；ATE = 3.32 个百分点；CUPED 方差缩减 12.7%。截止时间定为 2019-03-19 0 点。
