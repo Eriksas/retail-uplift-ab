@@ -1,0 +1,16 @@
+|--- express_points_spent <= -26.500
+|   |--- n_active_days <= 18.500
+|   |   |--- value: [0.095]
+|   |--- n_active_days >  18.500
+|   |   |--- value: [0.042]
+|--- express_points_spent >  -26.500
+|   |--- days_since_issue <= 292.500
+|   |   |--- age <= 44.500
+|   |   |   |--- value: [0.030]
+|   |   |--- age >  44.500
+|   |   |   |--- value: [0.058]
+|   |--- days_since_issue >  292.500
+|   |   |--- age <= 44.500
+|   |   |   |--- value: [0.007]
+|   |   |--- age >  44.500
+|   |   |   |--- value: [0.028]
