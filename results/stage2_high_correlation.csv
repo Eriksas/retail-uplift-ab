@@ -1,0 +1,10 @@
+﻿特征 A,特征 B,相关系数
+n_trans,n_active_days,0.9693601905999494
+avg_sum,median_sum,0.9607803146573375
+share_lines_paid_by_points,share_sum_paid_by_points,0.9596710802043166
+std_sum,max_sum,0.9154642224407988
+total_sum,regular_points_received,0.914446319439389
+share_morning,mean_hour,-0.9143423222236079
+avg_items,avg_lines,0.9099982721665724
+share_trans_30d,share_sum_30d,0.9075328493154886
+share_trans_points_spent,share_lines_paid_by_points,0.9011456704815023

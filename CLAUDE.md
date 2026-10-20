@@ -67,3 +67,4 @@
 ## 当前进度
 - 阶段 0：已完成（2026-10-20）。数据已下载并校验，交易流水转存为 `data/processed/purchases.parquet`；增益评估指标已写好并与 scikit-uplift 对齐。
 - 阶段 1：已完成（2026-10-20）。`src/abtest.py`、`src/features.py`、`notebooks/01_ab_test.ipynb`、`results/stage1_*`。随机化检验通过；ATE = 3.32 个百分点；CUPED 方差缩减 12.7%。截止时间定为 2019-03-19 0 点。
+- 阶段 2：已完成（2026-10-20）。`src/features.py`、`notebooks/02_features.ipynb`、`results/stage2_*`。43 个特征，泄露检查通过；划分保存在 `data/processed/split.csv`（训练 120,023 / 验证 40,008 / 测试 40,008）。
