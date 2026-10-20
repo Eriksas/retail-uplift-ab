@@ -1,0 +1,19 @@
+# 虚拟环境
+.venv/
+
+# 数据（不进 Git，来源见 data/README.md）
+data/raw/
+data/processed/
+
+# Python / Jupyter 缓存
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# DuckDB 临时文件
+*.duckdb
+*.duckdb.wal
+
+# 系统文件
+.DS_Store
+Thumbs.db
